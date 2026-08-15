@@ -19,7 +19,6 @@ class ContatoController extends Controller
             'assunto'   => 'required|string|max:500',
         ]);
 
-        // Salva no banco de dados
         Contato::create([
             'nome'      => $validated['nome'],
             'sobrenome' => $validated['sobrenome'] ?? null,
@@ -28,32 +27,33 @@ class ContatoController extends Controller
             'mensagem'  => $validated['assunto'],
         ]);
 
-        $emailsString = env('MAIL_TO_ADMINS', 'apoloempresacontato@gmail.com');
-        $emails = array_map('trim', explode(',', $emailsString));
+        $emailsString = env('MAIL_TO_ADMINS', config('mail.from.address'));
+        $emails = array_map('trim', array_filter(explode(',', $emailsString)));
+
+        $mailSuccess = false;
+        $errorMessage = null;
 
         try {
             Mail::to($emails)->send(new ContatoMail($validated));
             $mailSuccess = true;
         } catch (\Exception $e) {
-            // Guarda o erro no log do Laravel
             \Log::error('Erro ao enviar e-mail de contato: ' . $e->getMessage());
             $mailSuccess = false;
-            $errorMessage = $e->getMessage(); // Pega a mensagem de erro real
+            $errorMessage = $e->getMessage();
         }
 
         if ($request->ajax() || $request->wantsJson()) {
             if ($mailSuccess) {
                 return response()->json(['success' => true, 'message' => 'Mensagem enviada com sucesso!']);
-            } else {
-                // Retorna o erro para você ver no Console (F12) do navegador!
-                return response()->json([
-                    'success' => false, 
-                    'message' => 'Erro ao enviar e-mail.', 
-                    'debug_error' => $errorMessage
-                ], 500);
             }
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Erro ao enviar e-mail.',
+                'debug_error' => $errorMessage
+            ], 500);
         }
 
-        return redirect()->back()->with('success', 'Mensagem enviada com sucesso!');
+        return redirect()->back()->with($mailSuccess ? 'success' : 'error', $mailSuccess ? 'Mensagem enviada com sucesso!' : 'Não foi possível enviar o e-mail.');
     }
 }

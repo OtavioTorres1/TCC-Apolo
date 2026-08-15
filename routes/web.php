@@ -20,3 +20,9 @@ Route::get('/', function () {
 use App\Http\Controllers\ContatoController;
 
 Route::post('/contato/enviar', [ContatoController::class, 'store'])->name('contato.store');
+
+Route::get('/tema/{tema}', function ($tema) {
+    return redirect()->back()->withCookie(
+        cookie('tema', $tema, 60 * 24 * 30)
+    );
+});

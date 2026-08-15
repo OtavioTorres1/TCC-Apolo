@@ -45,6 +45,100 @@ body {
     flex-direction: column;
 }
 
+.btn-darkMode-1{
+    background-color: rgb(166, 166, 166);
+    height: 25px;
+    width: 50px;
+    border-radius: 30px;
+    
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-darkMode-2{
+    background-color: rgb(110, 110, 110);
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+}
+
+/* Modo Escuro */
+body.dark {
+    background-color: #05104a;
+    color: white;
+}
+
+body.dark h1{
+    color: white;
+}
+
+body.dark p{
+    color: white;
+}
+
+body.dark span{
+    color: white;
+}
+
+body.dark h2{
+    color: white;
+}
+
+body.dark .btn-darkMode-1{
+    background-color: rgb(166, 166, 166);
+    height: 25px;
+    width: 50px;
+    border-radius: 30px;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+body.dark .btn-darkMode-2{
+    background-color: white;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+}
+
+.config-container {
+    position: relative;
+}
+
+#darkMode {
+    position: absolute;
+
+    top: 0;
+    left: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    white-space: nowrap;
+    z-index: 1000;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#darkMode.mostrar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+.config-container a{
+    text-decoration: none;
+    color: white;
+}
+
 /* =======================================
    NAVBAR
    ======================================= */

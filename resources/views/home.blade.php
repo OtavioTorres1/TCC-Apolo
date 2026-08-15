@@ -6,8 +6,9 @@
     <title>Apolo Tecnologia</title>
     <link rel="stylesheet" href="{{url('css/home.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body  class="{{ request()->cookie('tema') == 'dark' ? 'dark' : '' }}">
 
 <nav class="navbar" id="navbar">
     <div class="nav-inner">
@@ -23,6 +24,34 @@
             <a href="#Devs">Nossa equipe</a>
             <a href="#FaleConosco" class="nav-cta">Fale Conosco</a>
         </div>
+            <div class="config-container">
+
+                <a href="" id="config">
+                    <!-- <img src="{{ asset('images/config.png') }}" width="50px" height="50px" alt=""> -->
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-settings-cog">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12.003 21c-.732 .001 -1.465 -.438 -1.678 -1.317a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c.886 .215 1.325 .957 1.318 1.694" />
+                        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                        <path d="M17.001 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M19.001 15.5v1.5" />
+                        <path d="M19.001 21v1.5" />
+                        <path d="M22.032 17.25l-1.299 .75" />
+                        <path d="M17.27 20l-1.3 .75" />
+                        <path d="M15.97 17.25l1.3 .75" />
+                        <path d="M20.733 20l1.3 .75" />
+                    </svg>
+                </a>
+
+                <a href="/tema/{{ request()->cookie('tema') == 'dark' ? 'light' : 'dark' }}" id="darkMode">
+                    <div class="btn-darkMode-1">
+                        <div class="btn-darkMode-2"></div>
+                    </div>
+
+                    Modo escuro
+                </a>
+
+            </div>
         <button class="hamburger" id="hamburger" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -53,6 +82,7 @@
         <p class="hero-desc reveal-up delay-1">
             Desenvolvemos soluções tecnológicas acessíveis que transformam a realidade das comunidades periféricas de São Paulo.
         </p>
+
         <div class="hero-actions reveal-up delay-2">
             <a href="#QuemSomos" class="btn-primary">Conheça a Apolo</a>
             <a href="#FaleConosco" class="btn-ghost">Entre em contato</a>
@@ -308,7 +338,7 @@
             <div class="contato-info reveal-left">
                 <h2 class="section-title">Fale Conosco</h2>
                 
-                <img src="{{ asset('images/contato.jpg') }}" alt="Atendimento Apolo" class="contato-image-left">
+                <img src="{{ asset('images/contato-sem-fundo.png') }}" alt="Atendimento Apolo" class="contato-image-left">
                 
                 <div class="contato-itens">
                     <div class="contato-item">
@@ -632,6 +662,24 @@
             }
         });
     }
+
+        //config/modo escuro
+    const config = document.getElementById('config');
+    const darkMode = document.getElementById('darkMode');
+
+    let modoAberto = false;
+
+    config.addEventListener('mouseenter', function () {
+
+        modoAberto = !modoAberto;
+
+        if (modoAberto) {
+            darkMode.classList.add('mostrar');
+        } else {
+            darkMode.classList.remove('mostrar');
+        }
+
+    });
 </script>
 
 </body>
