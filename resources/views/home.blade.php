@@ -21,6 +21,7 @@
             <a href="#QuemSomos">Quem somos</a>
             <a href="#Parceiros">Parceiros</a>
             <a href="#Tecnologias">Tecnologias</a>
+            <a href="#Projetos">Nossos projetos</a>
             <a href="#Devs">Nossa equipe</a>
             <a href="#FaleConosco" class="nav-cta">Fale Conosco</a>
         </div>
@@ -331,6 +332,54 @@
         </div>
     </section>
 
+        <div class="linha-amarela"></div>
+
+
+    <section id="Projetos" class="reveal-up">
+        <div class="Text-Section">
+            <h1 class="Titulos">Nossos Projetos</h1>
+            <p style="font-size: 30px; font-weight: bold">Vênus</p>
+        </div>
+
+        <a href="#" onclick="abrirModal(); return false;">
+            <div class="tech-grid-solto-projetos-model reveal-up">
+                <div class="tech-item">
+                    <img src="{{ asset('images/splash.png') }}" style="width: 300px; height: 500px" alt="splash-venus">
+                    <a href="#" onclick="abrirModal(); return false;">
+                        <span style="text-decoration: underline;">Saiba mais</span>
+                    </a>
+                </div>
+            </div>
+        </a>
+
+        <div id="meuModal" class="modal">
+            <div class="modal-conteudo">
+         <div class="tech-grid-solto-projetos reveal-up">
+              <div class="tech-item">
+                <img src="{{ asset('images/splash.png') }}" style="width: 300px; height: 500px" alt="splash-venus">
+                <span style="color: white">Tela de Splash</span>
+            </div>
+            <div class="tech-item">
+                <img src="{{ asset('images/diario.png') }}" style="width: 300px; height: 500px" alt="diario-venus">
+                <span style="color: white">Tela de Diário</span>
+            </div>
+            <div class="tech-item">
+                <img src="{{ asset('images/mapa-sus.png') }}" style="width: 300px; height: 500px" alt="mapa-sus-venus">
+                <span style="color: white">Tela de mapa sus</span>
+            </div>
+        </div>
+                <div style="width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px">
+                    <h1 style="font-size: 50px; font-weight: bold">Vênus</h1>
+                    <p class="projeto-descricao">Vênus é um aplicativo voltado á saúde da mulher, especialmente as que moram em regiões perifécas, as quais não tem tanto acesso á informações importantes para a sua saúde, como exames, métodos anticoncepcionais, vacinas, etc. A função do aplicativo Vênus é dispor á essas usuarias acesso a esse tipo de informações, além de ajudá-las a entrar em contato com profissionais e outras mulheres, acessar um mapa com as ubs mais próximas, e muito mais.  </p>
+
+                    <button onclick="fecharModal()" class="form-submit">Fechar</button>
+
+                </div> 
+            </div>
+        </div>
+    </section>
+
+
     <div class="linha-amarela"></div>
 
     <section id="FaleConosco" class="section-contato reveal-up">
@@ -502,14 +551,16 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
+            } else {
+                entry.target.classList.remove('visible');
             }
         });
     }, { threshold: 0.08 });
+
     document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => {
         revealObserver.observe(el);
     });
-
+    
     // Carrossel
     let carIndex = 0;
     const carrossel   = document.querySelector('.carrossel');
@@ -680,6 +731,44 @@
         }
 
     });
+
+//modal do Venus
+function abrirModal() {
+    document.getElementById("meuModal").style.display = "flex";
+}
+
+function fecharModal() {
+    document.getElementById("meuModal").style.display = "none";
+}
+
+//Para ele redimensionar ao clicar no header
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+
+    link.addEventListener('click', function () {
+
+        const id = this.getAttribute('href');
+        const secao = document.querySelector(id);
+
+        if (!secao) return;
+
+        const elementos = secao.querySelectorAll(
+            '.reveal-up, .reveal-left, .reveal-right'
+        );
+
+        elementos.forEach(elemento => {
+            elemento.classList.remove('visible');
+
+            // força o navegador a reconhecer a mudança
+            void elemento.offsetWidth;
+        });
+
+        elementos.forEach(elemento => {
+            elemento.classList.add('visible');
+        });
+
+    });
+
+});
 </script>
 
 </body>
