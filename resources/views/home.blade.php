@@ -167,7 +167,7 @@
                 <div class="carrossel-viewport">
                     <div class="carrossel">
                         <div class="Card-Azul-Devs">
-                            <img src="{{ asset('images/leonnihd.jpeg') }}" alt="leonni">
+                            <img src="{{ asset('images/leonnihd.jpeg') }}" alt="Leonni">
                             <div><h1>Leonni Cruz</h1><p>DBA</p></div>
                             <div class="imagensRedesDevs">
                                 <a href="https://www.instagram.com/" target="_blank"><img src="{{ asset('images/Instagram.png') }}"></a>
