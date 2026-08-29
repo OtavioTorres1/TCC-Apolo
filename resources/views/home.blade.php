@@ -30,7 +30,7 @@
                 <a href="" id="config">
                     <!-- <img src="{{ asset('images/config.png') }}" width="50px" height="50px" alt=""> -->
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-settings-cog">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-settings-cog">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M12.003 21c-.732 .001 -1.465 -.438 -1.678 -1.317a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c.886 .215 1.325 .957 1.318 1.694" />
                         <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
@@ -44,7 +44,7 @@
                     </svg>
                 </a>
 
-                <a href="/tema/{{ request()->cookie('tema') == 'dark' ? 'light' : 'dark' }}" id="darkMode">
+                <a href="/tema/{{ request()->cookie('tema') == 'dark' ? 'light' : 'dark' }}" id="darkMode" style="font-size: 10px">
                     <div class="btn-darkMode-1">
                         <div class="btn-darkMode-2"></div>
                     </div>
@@ -98,6 +98,9 @@
 <main>
 
     <section id="QuemSomos" class="reveal-up">
+
+        <img src="{{ asset('images/fundo-tecnologico2.png') }}" alt="fundo" class="fundo-tecnologico">
+
         <div class="Text-Section">
             <h1 class="Titulos">Quem somos?</h1>
             <p>A Apolo é uma empresa de tecnologia que se dedica a resolver os problemas sociais da população usando a tecnologia de forma acessível</p>
@@ -126,6 +129,9 @@
     <div class="linha-amarela"></div>
 
     <section id="Parceiros" class="reveal-up">
+
+        <img src="{{ asset('images/fundo-tecnologico3.png') }}" alt="fundo" class="fundo-tecnologico">
+
         <div class="Text-Section">
             <h1 class="Titulos">Nossos Parceiros</h1>
             <p>Aqui temos as nossas empresas parceiras, que nos apoiaram durante a nossa trajetória por esse projeto</p>
@@ -287,6 +293,9 @@
 
     <!-- TECNOLOGIAS -->
     <section id="Tecnologias" class="reveal-up">
+
+        <img src="{{ asset('images/fundo-tecnologico2.png') }}" alt="fundo" class="fundo-tecnologico">
+
         <div class="Text-Section">
             <h1 class="Titulos">Nossas Tecnologias</h1>
             <p>Conheça as ferramentas e linguagens que nossa equipe utiliza</p>
@@ -305,9 +314,9 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                 <span>JavaScript</span>
             </div>
-             <div class="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native">
-                <span>React Native</span>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                <span>Figma</span>
             </div>
              <div class="tech-item">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
@@ -321,9 +330,9 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" style="width: 80px; height: 80px;">
                 <span style="margin-top: -17px">MySQL</span>
             </div>
-            <div class="tech-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
-                <span>Figma</span>
+             <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native">
+                <span>React Native</span>
             </div>
             <div class="tech-item">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter: invert(1);">
@@ -336,53 +345,32 @@
 
 
     <section id="Projetos" class="reveal-up">
+
+        <img src="{{ asset('images/fundo-tecnologico3.png') }}" alt="fundo" class="fundo-tecnologico">
+
         <div class="Text-Section">
             <h1 class="Titulos">Nossos Projetos</h1>
-            <p style="font-size: 30px; font-weight: bold">Vênus</p>
+            <!-- <p style="font-size: 30px; font-weight: bold">Vênus</p> -->
         </div>
 
-        <a href="#" onclick="abrirModal(); return false;">
-            <div class="tech-grid-solto-projetos-model reveal-up">
-                <div class="tech-item">
-                    <img src="{{ asset('images/splash.png') }}" style="width: 300px; height: 500px" alt="splash-venus">
-                    <a href="#" onclick="abrirModal(); return false;">
-                        <span style="text-decoration: underline;">Saiba mais</span>
-                    </a>
+            <div class="tech-grid-solto-projetos reveal-up">
+                <div class="tech-item-Venus">
+                    <img src="{{ asset('images/prototipo-Venus.png') }}" style="width: 700px; height: 500px" alt="splash-venus">
                 </div>
-            </div>
-        </a>
-
-        <div id="meuModal" class="modal">
-            <div class="modal-conteudo">
-         <div class="tech-grid-solto-projetos reveal-up">
-              <div class="tech-item">
-                <img src="{{ asset('images/splash.png') }}" style="width: 300px; height: 500px" alt="splash-venus">
-                <span style="color: white">Tela de Splash</span>
-            </div>
-            <div class="tech-item">
-                <img src="{{ asset('images/diario.png') }}" style="width: 300px; height: 500px" alt="diario-venus">
-                <span style="color: white">Tela de Diário</span>
-            </div>
-            <div class="tech-item">
-                <img src="{{ asset('images/mapa-sus.png') }}" style="width: 300px; height: 500px" alt="mapa-sus-venus">
-                <span style="color: white">Tela de mapa sus</span>
-            </div>
-        </div>
                 <div style="width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px">
-                    <h1 style="font-size: 50px; font-weight: bold">Vênus</h1>
+                    <h1 class="Titulo-Venus">Vênus</h1>
                     <p class="projeto-descricao">Vênus é um aplicativo voltado á saúde da mulher, especialmente as que moram em regiões perifécas, as quais não tem tanto acesso á informações importantes para a sua saúde, como exames, métodos anticoncepcionais, vacinas, etc. A função do aplicativo Vênus é dispor á essas usuarias acesso a esse tipo de informações, além de ajudá-las a entrar em contato com profissionais e outras mulheres, acessar um mapa com as ubs mais próximas, e muito mais.  </p>
-
-                    <button onclick="fecharModal()" class="form-submit">Fechar</button>
-
                 </div> 
             </div>
-        </div>
+
     </section>
 
 
     <div class="linha-amarela"></div>
+    
 
     <section id="FaleConosco" class="section-contato reveal-up">
+
         <div class="contato-grid">
             <div class="contato-info reveal-left">
                 <h2 class="section-title">Fale Conosco</h2>
@@ -551,12 +539,10 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible');
+                revealObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.08 });
-
     document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => {
         revealObserver.observe(el);
     });
@@ -732,14 +718,6 @@
 
     });
 
-//modal do Venus
-function abrirModal() {
-    document.getElementById("meuModal").style.display = "flex";
-}
-
-function fecharModal() {
-    document.getElementById("meuModal").style.display = "none";
-}
 
 //Para ele redimensionar ao clicar no header
 document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
