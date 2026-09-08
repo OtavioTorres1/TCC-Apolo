@@ -99,8 +99,40 @@
 
     <section id="QuemSomos" class="reveal-up">
 
-        <img src="{{ asset('images/fundo-tecnologico2.png') }}" alt="fundo" class="fundo-tecnologico">
+<svg class="onda-linhas-bg" viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Gradiente em tons de azul escuro e médio -->
+      <linearGradient id="degrade-azul" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#021027" stop-opacity="0.2" />
+        <stop offset="30%" stop-color="#0b3c5d" stop-opacity="0.8" />
+        <stop offset="70%" stop-color="#1d5c8a" stop-opacity="0.8" />
+        <stop offset="100%" stop-color="#021027" stop-opacity="0.2" />
+      </linearGradient>
+    </defs>
 
+    <!-- Conjunto de linhas paralelas sem preenchimento (fill="none") -->
+    <g stroke="url(#degrade-azul)" fill="none" stroke-width="1.2">
+      <!-- Linhas da Faixa Principal -->
+      <path d="M -100 220 C 300 80, 800 380, 1540 180" opacity="0.9" />
+      <path d="M -100 228 C 300 88, 800 388, 1540 188" opacity="0.85" />
+      <path d="M -100 236 C 300 96, 800 396, 1540 196" opacity="0.8" />
+      <path d="M -100 244 C 300 104, 800 404, 1540 204" opacity="0.75" />
+      <path d="M -100 252 C 300 112, 800 412, 1540 212" opacity="0.7" />
+      <path d="M -100 260 C 300 120, 800 420, 1540 220" opacity="0.65" />
+      <path d="M -100 268 C 300 128, 800 428, 1540 228" opacity="0.6" />
+      <path d="M -100 276 C 300 136, 800 436, 1540 236" opacity="0.55" />
+      <path d="M -100 284 C 300 144, 800 444, 1540 244" opacity="0.5" />
+      <path d="M -100 292 C 300 152, 800 452, 1540 252" opacity="0.45" />
+
+      <!-- Linhas da Faixa Cruzada Secundária -->
+      <path d="M -100 350 C 450 480, 950 100, 1540 320" opacity="0.4" />
+      <path d="M -100 358 C 450 488, 950 108, 1540 328" opacity="0.35" />
+      <path d="M -100 366 C 450 496, 950 116, 1540 336" opacity="0.3" />
+      <path d="M -100 374 C 450 504, 950 124, 1540 344" opacity="0.25" />
+      <path d="M -100 382 C 450 512, 950 132, 1540 352" opacity="0.2" />
+    </g>
+  </svg>
+  
         <div class="Text-Section">
             <h1 class="Titulos">Quem somos?</h1>
             <p>A Apolo é uma empresa de tecnologia que se dedica a resolver os problemas sociais da população usando a tecnologia de forma acessível</p>
@@ -130,7 +162,39 @@
 
     <section id="Parceiros" class="reveal-up">
 
-        <img src="{{ asset('images/fundo-tecnologico3.png') }}" alt="fundo" class="fundo-tecnologico">
+<svg class="onda-linhas-bg" viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Gradiente em tons de azul escuro e médio -->
+      <linearGradient id="degrade-azul" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#021027" stop-opacity="0.2" />
+        <stop offset="30%" stop-color="#0b3c5d" stop-opacity="0.8" />
+        <stop offset="70%" stop-color="#1d5c8a" stop-opacity="0.8" />
+        <stop offset="100%" stop-color="#021027" stop-opacity="0.2" />
+      </linearGradient>
+    </defs>
+
+    <!-- Conjunto de linhas paralelas sem preenchimento (fill="none") -->
+    <g stroke="url(#degrade-azul)" fill="none" stroke-width="1.2">
+      <!-- Linhas da Faixa Principal -->
+      <path d="M -100 220 C 300 80, 800 380, 1540 180" opacity="0.9" />
+      <path d="M -100 228 C 300 88, 800 388, 1540 188" opacity="0.85" />
+      <path d="M -100 236 C 300 96, 800 396, 1540 196" opacity="0.8" />
+      <path d="M -100 244 C 300 104, 800 404, 1540 204" opacity="0.75" />
+      <path d="M -100 252 C 300 112, 800 412, 1540 212" opacity="0.7" />
+      <path d="M -100 260 C 300 120, 800 420, 1540 220" opacity="0.65" />
+      <path d="M -100 268 C 300 128, 800 428, 1540 228" opacity="0.6" />
+      <path d="M -100 276 C 300 136, 800 436, 1540 236" opacity="0.55" />
+      <path d="M -100 284 C 300 144, 800 444, 1540 244" opacity="0.5" />
+      <path d="M -100 292 C 300 152, 800 452, 1540 252" opacity="0.45" />
+
+      <!-- Linhas da Faixa Cruzada Secundária -->
+      <path d="M -100 350 C 450 480, 950 100, 1540 320" opacity="0.4" />
+      <path d="M -100 358 C 450 488, 950 108, 1540 328" opacity="0.35" />
+      <path d="M -100 366 C 450 496, 950 116, 1540 336" opacity="0.3" />
+      <path d="M -100 374 C 450 504, 950 124, 1540 344" opacity="0.25" />
+      <path d="M -100 382 C 450 512, 950 132, 1540 352" opacity="0.2" />
+    </g>
+  </svg>
 
         <div class="Text-Section">
             <h1 class="Titulos">Nossos Parceiros</h1>
@@ -294,7 +358,39 @@
     <!-- TECNOLOGIAS -->
     <section id="Tecnologias" class="reveal-up">
 
-        <img src="{{ asset('images/fundo-tecnologico2.png') }}" alt="fundo" class="fundo-tecnologico">
+<svg class="onda-linhas-bg" viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Gradiente em tons de azul escuro e médio -->
+      <linearGradient id="degrade-azul" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#021027" stop-opacity="0.2" />
+        <stop offset="30%" stop-color="#0b3c5d" stop-opacity="0.8" />
+        <stop offset="70%" stop-color="#1d5c8a" stop-opacity="0.8" />
+        <stop offset="100%" stop-color="#021027" stop-opacity="0.2" />
+      </linearGradient>
+    </defs>
+
+    <!-- Conjunto de linhas paralelas sem preenchimento (fill="none") -->
+    <g stroke="url(#degrade-azul)" fill="none" stroke-width="1.2">
+      <!-- Linhas da Faixa Principal -->
+      <path d="M -100 220 C 300 80, 800 380, 1540 180" opacity="0.9" />
+      <path d="M -100 228 C 300 88, 800 388, 1540 188" opacity="0.85" />
+      <path d="M -100 236 C 300 96, 800 396, 1540 196" opacity="0.8" />
+      <path d="M -100 244 C 300 104, 800 404, 1540 204" opacity="0.75" />
+      <path d="M -100 252 C 300 112, 800 412, 1540 212" opacity="0.7" />
+      <path d="M -100 260 C 300 120, 800 420, 1540 220" opacity="0.65" />
+      <path d="M -100 268 C 300 128, 800 428, 1540 228" opacity="0.6" />
+      <path d="M -100 276 C 300 136, 800 436, 1540 236" opacity="0.55" />
+      <path d="M -100 284 C 300 144, 800 444, 1540 244" opacity="0.5" />
+      <path d="M -100 292 C 300 152, 800 452, 1540 252" opacity="0.45" />
+
+      <!-- Linhas da Faixa Cruzada Secundária -->
+      <path d="M -100 350 C 450 480, 950 100, 1540 320" opacity="0.4" />
+      <path d="M -100 358 C 450 488, 950 108, 1540 328" opacity="0.35" />
+      <path d="M -100 366 C 450 496, 950 116, 1540 336" opacity="0.3" />
+      <path d="M -100 374 C 450 504, 950 124, 1540 344" opacity="0.25" />
+      <path d="M -100 382 C 450 512, 950 132, 1540 352" opacity="0.2" />
+    </g>
+  </svg>
 
         <div class="Text-Section">
             <h1 class="Titulos">Nossas Tecnologias</h1>
@@ -346,24 +442,62 @@
 
     <section id="Projetos" class="reveal-up">
 
-        <img src="{{ asset('images/fundo-tecnologico3.png') }}" alt="fundo" class="fundo-tecnologico">
+<svg class="onda-linhas-bg" viewBox="0 0 1440 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Gradiente em tons de azul escuro e médio -->
+      <linearGradient id="degrade-azul" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#021027" stop-opacity="0.2" />
+        <stop offset="30%" stop-color="#0b3c5d" stop-opacity="0.8" />
+        <stop offset="70%" stop-color="#1d5c8a" stop-opacity="0.8" />
+        <stop offset="100%" stop-color="#021027" stop-opacity="0.2" />
+      </linearGradient>
+    </defs>
+
+    <!-- Conjunto de linhas paralelas sem preenchimento (fill="none") -->
+    <g stroke="url(#degrade-azul)" fill="none" stroke-width="1.2">
+      <!-- Linhas da Faixa Principal -->
+      <path d="M -100 220 C 300 80, 800 380, 1540 180" opacity="0.9" />
+      <path d="M -100 228 C 300 88, 800 388, 1540 188" opacity="0.85" />
+      <path d="M -100 236 C 300 96, 800 396, 1540 196" opacity="0.8" />
+      <path d="M -100 244 C 300 104, 800 404, 1540 204" opacity="0.75" />
+      <path d="M -100 252 C 300 112, 800 412, 1540 212" opacity="0.7" />
+      <path d="M -100 260 C 300 120, 800 420, 1540 220" opacity="0.65" />
+      <path d="M -100 268 C 300 128, 800 428, 1540 228" opacity="0.6" />
+      <path d="M -100 276 C 300 136, 800 436, 1540 236" opacity="0.55" />
+      <path d="M -100 284 C 300 144, 800 444, 1540 244" opacity="0.5" />
+      <path d="M -100 292 C 300 152, 800 452, 1540 252" opacity="0.45" />
+
+      <!-- Linhas da Faixa Cruzada Secundária -->
+      <path d="M -100 350 C 450 480, 950 100, 1540 320" opacity="0.4" />
+      <path d="M -100 358 C 450 488, 950 108, 1540 328" opacity="0.35" />
+      <path d="M -100 366 C 450 496, 950 116, 1540 336" opacity="0.3" />
+      <path d="M -100 374 C 450 504, 950 124, 1540 344" opacity="0.25" />
+      <path d="M -100 382 C 450 512, 950 132, 1540 352" opacity="0.2" />
+    </g>
+  </svg>
 
         <div class="Text-Section">
             <h1 class="Titulos">Nossos Projetos</h1>
             <!-- <p style="font-size: 30px; font-weight: bold">Vênus</p> -->
         </div>
 
-            <div class="tech-grid-solto-projetos reveal-up">
-                <div class="tech-item-Venus">
-                    <img src="{{ asset('images/prototipo-Venus.png') }}" style="width: 700px; height: 500px" alt="splash-venus">
-                </div>
-                <div style="width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px">
-                    <h1 class="Titulo-Venus">Vênus</h1>
-                    <p class="projeto-descricao">Vênus é um aplicativo voltado á saúde da mulher, especialmente as que moram em regiões perifécas, as quais não tem tanto acesso á informações importantes para a sua saúde, como exames, métodos anticoncepcionais, vacinas, etc. A função do aplicativo Vênus é dispor á essas usuarias acesso a esse tipo de informações, além de ajudá-las a entrar em contato com profissionais e outras mulheres, acessar um mapa com as ubs mais próximas, e muito mais.  </p>
-                </div> 
-            </div>
+            <div class="Venus-global">
+                    <div class="tech-item-Venus">
+                        <img src="{{ asset('images/prototipo-venus.png') }}" style="width: 600px; height: 400px;" alt="splash-venus">
+                    </div>
 
+
+                <div class="modal-conteudo">
+    
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px">
+                        <h1 class="Titulo-Venus">Vênus</h1>
+                        <p class="projeto-descricao" >Vênus é um aplicativo voltado á saúde da mulher, especialmente as que moram em regiões perifécas, as quais não tem tanto acesso á informações importantes para a sua saúde, como exames, métodos anticoncepcionais, vacinas, etc. A função do aplicativo Vênus é dispor á essas usuarias acesso a esse tipo de informações, além de ajudá-las a entrar em contato com profissionais e outras mulheres, acessar um mapa com as ubs mais próximas, e muito mais.  </p>
+
+                    </div> 
+                </div>
+            </div>
     </section>
+
 
 
     <div class="linha-amarela"></div>
@@ -718,35 +852,6 @@
 
     });
 
-
-//Para ele redimensionar ao clicar no header
-document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
-
-    link.addEventListener('click', function () {
-
-        const id = this.getAttribute('href');
-        const secao = document.querySelector(id);
-
-        if (!secao) return;
-
-        const elementos = secao.querySelectorAll(
-            '.reveal-up, .reveal-left, .reveal-right'
-        );
-
-        elementos.forEach(elemento => {
-            elemento.classList.remove('visible');
-
-            // força o navegador a reconhecer a mudança
-            void elemento.offsetWidth;
-        });
-
-        elementos.forEach(elemento => {
-            elemento.classList.add('visible');
-        });
-
-    });
-
-});
 </script>
 
 </body>

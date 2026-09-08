@@ -571,6 +571,7 @@ main > .linha-amarela {
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
+        z-index: 2;
 }
 
 .Titulos {
@@ -582,6 +583,7 @@ main > .linha-amarela {
     border-bottom: 5px solid #f6a420;
     padding-bottom: 5px;
     margin-bottom: 10px;
+        z-index: 2;
 }
 
 .Titulos-Devs {
@@ -594,6 +596,7 @@ main > .linha-amarela {
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 10px;
+        z-index: 2;
 }
 
 .Titulos-Devs::before {
@@ -638,6 +641,7 @@ main > .linha-amarela {
     cursor: pointer;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
     user-select: none;
+    
 }
 
 .Card-Azul:hover {
@@ -1445,4 +1449,135 @@ filter:
     font-size: 50px;
     font-weight: bold;
     color: #9E182B
+}
+
+
+/* modal */
+.tech-grid-solto-projetos-model {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease;
+}
+
+.tech-grid-solto-projetos-model:hover{
+    transform: scale(1.1);
+}
+
+
+
+.modal-conteudo {
+    padding: 25px;
+    width: 200px auto;
+    height: 100px auto;
+    border-radius: 30px;
+    max-width: 90%;
+    position: relative;
+
+    background: linear-gradient(160deg, #ffffff, #fffcfc);
+
+    display: flex;
+    gap: 50px;
+    color: #000;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+body.dark .modal-conteudo {
+    padding: 25px;
+    width: 200px auto;
+    height: 100px auto;
+    border-radius: 30px;
+    max-width: 90%;
+    position: relative;
+
+    background: linear-gradient(160deg, #ffffff, #fffcfc);
+
+    display: flex;
+    gap: 50px;
+    color: #000;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .modal-conteudo h1{
+    font-family: 'Sora', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #9E182B
+}
+
+body.dark .modal-conteudo p{
+    font-family: 'Sora', sans-serif;
+    color: #000;
+}
+
+.tech-item-Venus span{
+    text-decoration: underline;
+    color: black;
+}
+
+.tech-item-Venus span{
+    text-decoration: underline;
+    color: black;
+}
+
+.Venus-global{
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+
+
+/* fundo ondulado tecnologico  */
+
+.secao-tecnologias {
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+  overflow: hidden; /* Corta o excesso das linhas fora da tela */
+  background-color: #ffffff; /* Fundo limpo do site */
+}
+
+/* Fixa a onda ao fundo sem interromper interações */
+.onda-linhas-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Garante que os títulos e ícones fiquem na frente das linhas */
+.conteudo-secao {
+  position: relative;
+  z-index: 2;
+}
+
+/* Quando estiver no modo escuro (body.dark) */
+body.dark .fundo-onda-svg,
+body.dark .onda-linhas-bg,
+body.dark svg {
+  /* 1. Força a cor das linhas para branco puro */
+  stroke: #ffffff !important;
+  
+  /* 2. Garante que fique bem visível sobre o fundo escuro */
+  opacity: 0.9 !important;
+
+  /* 3. Aumenta levemente a espessura para dar mais presença */
+  stroke-width: 1.8px;
+
+  /* 4. Brilho suave branco ao redor das linhas (opcional) */
+  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.4));
+}
+
+body.dark .fundo-onda-svg,
+body.dark .onda-linhas-bg {
+  /* Converte qualquer cor do SVG diretamente para branco */
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
 }
