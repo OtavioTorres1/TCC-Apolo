@@ -890,6 +890,48 @@ main > .linha-amarela {
     padding: 0;
 }
 
+body.dark #prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--blue-mid);
+    border: 2px solid var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transition: background var(--transition), color var(--transition), border-color var(--transition), transform 0.25s ease;
+    padding: 0;
+}
+
+body.dark #nextBtn,
+#prevBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--blue-mid);
+    border: 2px solid var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transition: background var(--transition), color var(--transition), border-color var(--transition), transform 0.25s ease;
+    padding: 0;
+}
+
 #prevBtn { left: -54px; }
 #nextBtn { right: -54px; }
 
@@ -900,6 +942,15 @@ main > .linha-amarela {
     border-color: var(--blue-brand);
     transform: translateY(-50%) scale(1.1);
 }
+
+body.dark #prevBtn:hover,
+#nextBtn:hover {
+    background: var(--blue-brand);
+    color: white;
+    border-color: var(--blue-brand);
+    transform: translateY(-50%) scale(1.1);
+}
+
 
 #prevBtn svg,
 #nextBtn svg {
@@ -1417,12 +1468,12 @@ filter:
 
 /* Projeto: Vênus */
 .projeto-descricao {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: justify;
-    font-size: 18px;
-    line-height: 1.5;
-    text-indent: 40px;
+    max-width: 560px;
+    margin: 0;
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--gray-700);
     font-family: 'Sora', 'Poppins', sans-serif;
 }
 
@@ -1446,87 +1497,207 @@ filter:
 
 .Titulo-Venus{
     font-family: 'Sora', sans-serif;
-    font-size: 50px;
+    font-size: 42px;
     font-weight: bold;
-    color: #9E182B
+    color: #9E182B;
+    line-height: 1;
+}
+
+body.dark .Titulo-Venus{
+    font-family: 'Sora', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: #9E182B;
+    line-height: 1;
 }
 
 
-/* modal */
-.tech-grid-solto-projetos-model {
+
+/* =======================================
+   CARD DO PROJETO VÊNUS
+   Moldura (fundo, blobs, título da seção) segue a
+   identidade da Apolo — azul/laranja.
+   O conteúdo do card usa o vermelho/rosa do Vênus,
+   igual ao material de identidade visual do app.
+   ======================================= */
+
+.projetos-carrossel-wrap {
+    position: relative;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: transform 0.8s ease;
-}
-
-.tech-grid-solto-projetos-model:hover{
-    transform: scale(1.1);
-}
-
-
-
-.modal-conteudo {
-    padding: 25px;
-    width: 200px auto;
-    height: 100px auto;
-    border-radius: 30px;
-    max-width: 90%;
-    position: relative;
-
-    background: linear-gradient(160deg, #ffffff, #fffcfc);
-
-    display: flex;
-    gap: 50px;
-    color: #000;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-
-body.dark .modal-conteudo {
-    padding: 25px;
-    width: 200px auto;
-    height: 100px auto;
-    border-radius: 30px;
-    max-width: 90%;
-    position: relative;
-
-    background: linear-gradient(160deg, #ffffff, #fffcfc);
-
-    display: flex;
-    gap: 50px;
-    color: #000;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-body.dark .modal-conteudo h1{
-    font-family: 'Sora', sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-    color: #9E182B
-}
-
-body.dark .modal-conteudo p{
-    font-family: 'Sora', sans-serif;
-    color: #000;
-}
-
-.tech-item-Venus span{
-    text-decoration: underline;
-    color: black;
-}
-
-.tech-item-Venus span{
-    text-decoration: underline;
-    color: black;
+    gap: 22px;
+    z-index: 2;
 }
 
 .Venus-global{
+    position: relative;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    width: 100%;
+    max-width: 1320px;
+    padding: 20px;
     z-index: 2;
+}
+
+/* blobs em rosa (paleta Vênus), atrás do card, com uma
+   flutuação bem sutil — dão vida à composição sem competir
+   com o conteúdo, que fica sempre acima (z-index: 2) */
+.projeto-blob {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+    animation: blob-float 9s ease-in-out infinite;
+}
+
+.projeto-blob-1 {
+    width: 420px;
+    height: 420px;
+    left: -100px;
+    top: -80px;
+    background: radial-gradient(circle at 30% 30%, rgba(249, 203, 214, 0.65), rgba(249, 203, 214, 0) 70%);
+    animation-delay: 0s;
+}
+
+.projeto-blob-2 {
+    width: 320px;
+    height: 320px;
+    right: -60px;
+    bottom: -90px;
+    background: radial-gradient(circle at 70% 70%, rgba(158, 24, 43, 0.16), rgba(158, 24, 43, 0) 70%);
+    animation-delay: -3s;
+    animation-duration: 11s;
+}
+
+.projeto-blob-3 {
+    width: 200px;
+    height: 200px;
+    left: 38%;
+    top: -60px;
+    background: radial-gradient(circle at 50% 50%, rgba(242, 175, 188, 0.5), rgba(242, 175, 188, 0) 70%);
+    animation-delay: -6s;
+    animation-duration: 8s;
+}
+
+@keyframes blob-float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(14px, -18px) scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .projeto-blob { animation: none; }
+}
+
+.tech-item-Venus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: default;
+    z-index: 2;
+    flex-shrink: 0;
+    animation: tech-item-in 0.7s ease both;
+}
+
+.tech-item-Venus img{
+    width: 600px;
+    height: 400px;
+    max-width: 100%;
+    object-fit: contain;
+    z-index: 2;
+    transition: transform 0.4s ease;
+}
+
+.tech-item-Venus:hover img {
+    transform: translateY(-6px);
+}
+
+@keyframes tech-item-in {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.tech-item-Venus span{
+    text-decoration: underline;
+    color: black;
+}
+
+/* card de texto */
+.modal-conteudo {
+    position: relative;
+    padding: 36px 34px;
+    border-radius: var(--radius-lg);
+    max-width: 620px;
+
+    background: linear-gradient(160deg, #ffffff, #fff5f6);
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: #000;
+    z-index: 2;
+
+    box-shadow: 0 12px 40px rgba(158, 24, 43, 0.14);
+    animation: tech-item-in 0.7s ease 0.15s both;
+}
+
+/* pequeno traço rosa acima do título, mesma lógica do
+   sublinhado laranja de .Titulos — cada marca com o
+   detalhe na sua própria cor */
+.modal-conteudo-linha {
+    width: 46px;
+    height: 4px;
+    border-radius: 4px;
+    background: #F2AFBC;
+    display: block;
+}
+
+.venus-icon-badge {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #FDEEF0;
+    color: #9E182B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.venus-icon-badge svg {
+    width: 22px;
+    height: 22px;
+}
+
+.modal-conteudo-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-right: 40px;
+}
+
+
+
+body.dark .modal-conteudo p,
+body.dark .projeto-descricao {
+     max-width: 560px;
+    margin: 0;
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--gray-700);
+    font-family: 'Sora', 'Poppins', sans-serif;
+}
+
+body.dark .venus-icon-badge {
+    background: rgba(242, 175, 188, 0.15);
 }
 
 
