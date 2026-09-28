@@ -526,7 +526,18 @@ section {
     padding: 40px 20px;
     gap: 30px;
     width: 100%;
-    scroll-margin-top: 70px;
+    scroll-margin-top: 80px; 
+}
+#FaleConosco{
+    scroll-margin-top: 15px;
+}
+
+#Tecnologias{
+    scroll-margin-top: 140px;
+}
+
+#Parceiros{
+    scroll-margin-top: 65px;
 }
 
 .linha-amarela {
