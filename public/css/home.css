@@ -514,7 +514,7 @@ main {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 140px;
 }
 
 section {
@@ -1764,7 +1764,7 @@ body.dark .onda-linhas-bg {
   opacity: 0.85;
 }
 
-@media (min-width: 1921px) {
+@media (min-width: 1521px) {
     section {
         scroll-margin-top: 200px;
         scroll-snap-align: center;

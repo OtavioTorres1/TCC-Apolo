@@ -20,9 +20,9 @@
             <a href="#inicio">Início</a>
             <a href="#QuemSomos">Quem somos</a>
             <a href="#Parceiros">Parceiros</a>
+            <a href="#Devs">Nossa equipe</a>
             <a href="#Tecnologias">Tecnologias</a>
             <a href="#Projetos">Nossos projetos</a>
-            <a href="#Devs">Nossa equipe</a>
             <a href="#FaleConosco" class="nav-cta">Fale Conosco</a>
         </div>
             <div class="config-container">
