@@ -12,7 +12,7 @@
 
 <nav class="navbar" id="navbar">
     <div class="nav-inner">
-        <div class="nav-logo">
+        <div class="nav-logo"> 
             <img src="{{ asset('images/logo-apolo.png') }}" alt="Apolo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
    
         </div>

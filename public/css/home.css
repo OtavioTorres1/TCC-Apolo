@@ -1763,3 +1763,22 @@ body.dark .onda-linhas-bg {
   filter: brightness(0) invert(1);
   opacity: 0.85;
 }
+
+@media (min-width: 1921px) {
+    section {
+        scroll-margin-top: 200px;
+        scroll-snap-align: center;
+    }
+
+    #FaleConosco {
+        scroll-margin-top: 115px;
+    }
+
+    #Tecnologias {
+        scroll-margin-top: 240px;
+    }
+
+    #Parceiros {
+        scroll-margin-top: 165px;
+    }
+}
